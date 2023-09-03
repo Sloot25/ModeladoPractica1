@@ -1,24 +1,42 @@
 package Strategy;
 
 public class Meganman extends Personaje implements AtaqueCopcam{
-    @Override
-    public void ataqueBase(Personaje personaje) {
+  AtaqueCopcam ataque;
+  public Meganman(Arena arena){
+    this.nombre = "Meganman";
+    this.arena = arena; 
+    this.vida = 120;
+  }
 
+  @Override
+  public String ataqueBase(Personaje personaje) {
+    personaje.setVida(personaje.getVida()-10);
+    return "Meganman disparo balitas a " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n';
+  }
+
+  @Override
+  public void setAtaque(AtaqueCopcam ataque) {
+    this.ataque = ataque;
+  }
+
+  @Override
+  public void powerUp(int numero) {
+    switch (numero) {
+      case 0:
+        this.ataque = new Gutsman();
+        break;
+      case 1: 
+        this.ataque = new VoidTermina();
+        break;
+      case 2: 
+        this.ataque = new Zero();
     }
+  }
 
-    @Override
-    public void setAtaque() {
-
-    }
-
-    @Override
-    public void powerUp() {
-
-    }
-
-    @Override
-    public void ataque() {
-
-    }
-    
+  @Override
+  public void ataque(Personaje personaje) {
+    personaje.setVida(personaje.getVida() - this.ataque.getDamage());
+    return "Meganman se transformo en " + this.ataque.getNombre() + " y uso " + this.ataque.getAtaque() + " en " + personaje.getNombre() + '\n'; 
+  }
+  
 }
