@@ -9,12 +9,10 @@ public class Arena implements Subject{
   public void removeUser(Observer user){
     usuarios.remove(user);
   }
+  @Override
   public void notifyUser(String mensaje){
     for(Observer user : usuarios)
       user.update(mensaje);
   }
-  @Override
-  public void notifyUser() {
 
-  }
 }
