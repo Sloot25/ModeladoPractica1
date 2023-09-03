@@ -1,5 +1,5 @@
-package Strategy;
-
-public class Arceus extends Dittu{
-    
+package src.Strategy.Chinpokomon;
+import AtaqueChimpokomon;
+public class Arceus implemets AtaqueChimpokomon{
+  public String atacar(Personaje personaje){}
 }

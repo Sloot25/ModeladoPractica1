@@ -1,5 +1,5 @@
-package Strategy;
+package src.Strategy;
 
 public interface AtaqueChimpokomon {
-    public void ataque();
+  public String atacar(Personaje personaje );
 }

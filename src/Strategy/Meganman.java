@@ -1,5 +1,5 @@
-package Strategy;
-
+package src.Strategy;
+import Copcam.*;
 public class Meganman extends Personaje implements AtaqueCopcam{
   AtaqueCopcam ataque;
   public Meganman(Arena arena){
@@ -34,9 +34,8 @@ public class Meganman extends Personaje implements AtaqueCopcam{
   }
 
   @Override
-  public void ataque(Personaje personaje) {
-    personaje.setVida(personaje.getVida() - this.ataque.getDamage());
-    return "Meganman se transformo en " + this.ataque.getNombre() + " y uso " + this.ataque.getAtaque() + " en " + personaje.getNombre() + '\n'; 
+  public String ataque(Personaje personaje) {
+    return this.ataque.atacar(personaje);
   }
   
 }

@@ -1,5 +1,8 @@
-package Strategy;
+package src.Strategy.Chinpokomon;
+import AtaqueChimpokomon;
 
-public class Voltorb extends Dittu{
-    
+public class Voltorb implements AtaqueChimpokomon{
+    public String atacar(Personaje personaje){
+
+  }
 }

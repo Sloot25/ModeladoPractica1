@@ -1,5 +1,5 @@
-package Strategy;
+package src.Strategy;
 
 public interface AtaqueCopcam{
-    public void ataque();
+  public String atacar(Personaje personaje);
 }

@@ -1,5 +1,5 @@
-package Strategy;
+package src.Strategy.Nientiendo;
 
-public class KingDedede {
-    
+public class KingDedede implements AtaqueNientiendo{
+    public String atacar(Personaje personaje){}
 }

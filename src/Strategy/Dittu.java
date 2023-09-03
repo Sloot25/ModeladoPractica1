@@ -1,24 +1,43 @@
-package Strategy;
-
+package src.Strategy;
+import Nientiendo.*;
 public class Dittu extends Personaje implements AtaqueChimpokomon{
-    @Override
-    public void ataqueBase(Personaje personaje) {
+  AtaqueChimpokomon ataque;
+  Arena arena;
+  public Dittu(Arena arena){
+    this.arena = arena; 
+    this.nombre = "Dittu";
+    this.vida = 110;
+  }
 
+  @Override
+  public String ataqueBase(Personaje personaje) {
+    personaje.setVida(personaje.getVida()-10);
+    return "Dittu le ha escupido a " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n';
+  }
+
+  @Override
+  public void setAtaque(AtaqueChimpokomon ataque) {
+    this.ataque = ataque;
+  }
+
+  @Override
+  public void powerUp(int numero) {
+    switch(numero){
+      case 0: 
+        this.ataque = new Arceus();
+        break; 
+      case 1: 
+        this.ataque = new Snorlax();
+        break; 
+      case 2: 
+        this.ataque = new Voltorb();
+        break;
     }
+  }
 
-    @Override
-    public void setAtaque() {
-
-    }
-
-    @Override
-    public void powerUp() {
-
-    }
-
-    @Override
-    public void ataque() {
-    
-    }
+  @Override
+  public String ataque(Personaje personaje) {
+    return this.ataque.atacar(personaje);
+  }
     
 }
