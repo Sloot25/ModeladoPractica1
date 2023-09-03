@@ -1,8 +1,11 @@
-package src.Strategy;
+package Strategy;
+
+import Observer.Arena;
 
 public abstract class Personaje {
-  private String nombre;
-  private int vida;
+  protected String nombre;
+  protected int vida;
+  protected Arena arena;
   public String getNombre() {
       return nombre;
   }
@@ -16,7 +19,7 @@ public abstract class Personaje {
       this.vida = vida;
   }
   abstract public String ataqueBase(Personaje personaje);
-  //abstract public void setAtaque();
+  abstract public void setAtaque(Ataque ataque) throws Exception;
   abstract public void powerUp(int numero);
   abstract public String ataque(Personaje personaje);
 }

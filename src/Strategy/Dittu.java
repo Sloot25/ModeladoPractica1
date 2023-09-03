@@ -1,10 +1,11 @@
-package src.Strategy;
-import Nientiendo.*;
-import src.Observer.Arena;
+package Strategy;
+import Observer.Arena;
+import Strategy.Chinpokomon.Arceus;
+import Strategy.Chinpokomon.Snorlax;
+import Strategy.Chinpokomon.Voltorb;
 
 public class Dittu extends Personaje implements AtaqueChimpokomon{
   AtaqueChimpokomon ataque;
-  Arena arena;
   public Dittu(Arena arena){
     this.arena = arena; 
     this.nombre = "Dittu";
@@ -18,21 +19,23 @@ public class Dittu extends Personaje implements AtaqueChimpokomon{
   }
 
   @Override
-  public void setAtaque(AtaqueChimpokomon ataque) {
-    this.ataque = ataque;
+  public void setAtaque(Ataque ataque) throws Exception {
+    if(!(ataque instanceof AtaqueChimpokomon))
+      throw new Exception("Error en transformación de Dittu");
+    this.ataque = (AtaqueChimpokomon) ataque;
   }
 
   @Override
   public void powerUp(int numero) {
     switch(numero){
       case 0: 
-        this.ataque = new Arceus();
+        this.ataque = new Arceus(arena);
         break; 
       case 1: 
-        this.ataque = new Snorlax();
+        this.ataque = new Snorlax(arena);
         break; 
       case 2: 
-        this.ataque = new Voltorb();
+        this.ataque = new Voltorb(arena);
         break;
     }
   }
@@ -40,6 +43,11 @@ public class Dittu extends Personaje implements AtaqueChimpokomon{
   @Override
   public String ataque(Personaje personaje) {
     return this.ataque.atacar(personaje);
+  }
+
+  @Override
+  public String atacar(Personaje personaje) {
+    return ataqueBase(personaje);
   }
     
 }

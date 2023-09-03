@@ -1,6 +1,9 @@
-package src.Strategy;
-import Chinpokomon.*;
-import src.Observer.Arena;
+package Strategy;
+
+import Observer.Arena;
+import Strategy.Nientiendo.MetaKnight;
+import Strategy.Nientiendo.VoidTermina;
+import Strategy.Nientiendo.KingDedede;
 
 public class Korby extends Personaje implements AtaqueNientiendo {
   AtaqueNientiendo ataque;  
@@ -18,28 +21,35 @@ public class Korby extends Personaje implements AtaqueNientiendo {
   }
 
   @Override
-  public void setAtaque(AtaqueNientiendo ataque) {
-    this.ataque = ataque;
+  public void setAtaque(Ataque ataque) throws Exception {
+    if(!(ataque instanceof AtaqueNientiendo))
+      throw new Exception("Error en transformación de Dittu");
+    this.ataque = (AtaqueNientiendo) ataque;
   }
 
   @Override
   public void powerUp(int numero) {
     switch(numero){
       case 0: 
-        this.ataque = new  Fireman();
+        this.ataque = (AtaqueNientiendo) new MetaKnight(arena);
         break; 
       case 1: 
-        this.ataque = new Iceman();
+        this.ataque = (AtaqueNientiendo) new VoidTermina(arena);
         break; 
       case 2: 
-        this.ataque = new KingDedede();
+        this.ataque = new KingDedede(arena);
         break;
     }
   }
 
   @Override
   public String ataque(Personaje personaje) {
-    return this.ataque.atacar(Personaje personaje);
+    return this.ataque.atacar(personaje);
+  }
+
+  @Override
+  public String atacar(Personaje personaje) {
+    return ataqueBase(personaje);
   }
     
 }

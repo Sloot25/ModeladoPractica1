@@ -1,6 +1,8 @@
-package src.Strategy;
-import Copcam.*;
-import src.Observer.Arena;
+package Strategy;
+import Strategy.Copcam.Fireman;
+import Strategy.Copcam.Gutsman;
+import Strategy.Copcam.Iceman;
+import Observer.Arena;
 public class Meganman extends Personaje implements AtaqueCopcam{
   AtaqueCopcam ataque;
   public Meganman(Arena arena){
@@ -16,27 +18,34 @@ public class Meganman extends Personaje implements AtaqueCopcam{
   }
 
   @Override
-  public void setAtaque(AtaqueCopcam ataque) {
-    this.ataque = ataque;
+  public void setAtaque(Ataque ataque) throws Exception {
+    if(!(ataque instanceof AtaqueCopcam))
+      throw new Exception("Error en transformación de Dittu");
+    this.ataque = (AtaqueCopcam) ataque;
   }
 
   @Override
   public void powerUp(int numero) {
     switch (numero) {
       case 0:
-        this.ataque = new Gutsman();
+        this.ataque = new Gutsman(arena);
         break;
       case 1: 
-        this.ataque = new VoidTermina();
+        this.ataque = new Fireman(arena);
         break;
       case 2: 
-        this.ataque = new MetaKnight();
+        this.ataque = new Iceman(arena);
     }
   }
 
   @Override
   public String ataque(Personaje personaje) {
     return this.ataque.atacar(personaje);
+  }
+
+  @Override
+  public String atacar(Personaje personaje) {
+    return ataqueBase(personaje);
   }
   
 }

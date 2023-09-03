@@ -1,5 +1,5 @@
-package src.Strategy;
+package Strategy;
 
-public interface AtaqueChimpokomon {
+public interface AtaqueChimpokomon extends Ataque{
   public String atacar(Personaje personaje );
 }
