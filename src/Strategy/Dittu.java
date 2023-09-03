@@ -1,5 +1,7 @@
 package src.Strategy;
 import Nientiendo.*;
+import src.Observer.Arena;
+
 public class Dittu extends Personaje implements AtaqueChimpokomon{
   AtaqueChimpokomon ataque;
   Arena arena;

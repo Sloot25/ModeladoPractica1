@@ -1,5 +1,7 @@
 package src.Strategy;
 import Chinpokomon.*;
+import src.Observer.Arena;
+
 public class Korby extends Personaje implements AtaqueNientiendo {
   AtaqueNientiendo ataque;  
   Arena arena; 
@@ -10,7 +12,7 @@ public class Korby extends Personaje implements AtaqueNientiendo {
   }
 
   @Override
-  public void ataqueBase(Personaje personaje) {
+  public String ataqueBase(Personaje personaje) {
     personaje.setVida(personaje.getVida()-10); 
     return "Korby le dio un sape a " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n';
   }
@@ -36,7 +38,7 @@ public class Korby extends Personaje implements AtaqueNientiendo {
   }
 
   @Override
-  public void ataque(Personaje personaje) {
+  public String ataque(Personaje personaje) {
     return this.ataque.atacar(Personaje personaje);
   }
     

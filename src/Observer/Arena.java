@@ -1,4 +1,4 @@
-package Observer;
+package src.Observer;
 import java.util.List;
 public class Arena implements Subject{
   List<Observer> usuarios;

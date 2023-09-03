@@ -1,4 +1,4 @@
-package Observer;
+package src.Observer;
 import java.util.Random;
 import Strategy.Personaje; 
 

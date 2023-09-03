@@ -1,5 +1,6 @@
 package src.Strategy;
 import Copcam.*;
+import src.Observer.Arena;
 public class Meganman extends Personaje implements AtaqueCopcam{
   AtaqueCopcam ataque;
   public Meganman(Arena arena){
@@ -29,7 +30,7 @@ public class Meganman extends Personaje implements AtaqueCopcam{
         this.ataque = new VoidTermina();
         break;
       case 2: 
-        this.ataque = new Zero();
+        this.ataque = new MetaKnight();
     }
   }
 

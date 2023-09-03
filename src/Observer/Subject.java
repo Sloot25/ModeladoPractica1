@@ -1,4 +1,4 @@
-package Observer;
+package src.Observer;
 
 public interface Subject{
   public void addUser(Observer user);
