@@ -1,5 +1,5 @@
+package Observer;
 import java.util.List;
-package src.Observer;
 public class Arena implements Subject{
   List<Observer> usuarios;
   String notificacion;
@@ -12,5 +12,9 @@ public class Arena implements Subject{
   public void notifyUser(String mensaje){
     for(Observer user : usuarios)
       user.update(mensaje);
+  }
+  @Override
+  public void notifyUser() {
+
   }
 }
