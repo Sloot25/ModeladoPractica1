@@ -3,8 +3,8 @@ import Observer.Arena;
 import Strategy.Chinpokomon.Arceus;
 import Strategy.Chinpokomon.Snorlax;
 import Strategy.Chinpokomon.Voltorb;
-
-public class Dittu extends Personaje implements AtaqueChimpokomon{
+import Strategy.AtaqueChimpokomon;
+public class Dittu extends Personaje{
   AtaqueChimpokomon ataque;
   public Dittu(Arena arena){
     this.arena = arena; 
@@ -17,14 +17,14 @@ public class Dittu extends Personaje implements AtaqueChimpokomon{
     personaje.setVida(personaje.getVida()-10);
     return "Dittu le ha escupido a " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n';
   }
-
+/*
   @Override
   public void setAtaque(Ataque ataque) throws Exception {
     if(!(ataque instanceof AtaqueChimpokomon))
       throw new Exception("Error en transformación de Dittu");
     this.ataque = (AtaqueChimpokomon) ataque;
   }
-
+*/
   @Override
   public void powerUp(int numero) {
     switch(numero){
@@ -44,10 +44,10 @@ public class Dittu extends Personaje implements AtaqueChimpokomon{
   public String ataque(Personaje personaje) {
     return this.ataque.atacar(personaje);
   }
-
+  /*
   @Override
   public String atacar(Personaje personaje) {
     return ataqueBase(personaje);
   }
-    
+  */  
 }

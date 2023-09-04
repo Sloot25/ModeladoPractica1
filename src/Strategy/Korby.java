@@ -4,10 +4,9 @@ import Observer.Arena;
 import Strategy.Nientiendo.MetaKnight;
 import Strategy.Nientiendo.VoidTermina;
 import Strategy.Nientiendo.KingDedede;
-
-public class Korby extends Personaje implements AtaqueNientiendo {
+import Strategy.AtaqueNientiendo;
+public class Korby extends Personaje {
   AtaqueNientiendo ataque;  
-  Arena arena; 
 
   public Korby(Arena arena){
     this.vida = 100; 
@@ -19,14 +18,14 @@ public class Korby extends Personaje implements AtaqueNientiendo {
     personaje.setVida(personaje.getVida()-10); 
     return "Korby le dio un sape a " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n';
   }
-
+/*
   @Override
   public void setAtaque(Ataque ataque) throws Exception {
     if(!(ataque instanceof AtaqueNientiendo))
       throw new Exception("Error en transformación de Dittu");
     this.ataque = (AtaqueNientiendo) ataque;
   }
-
+*/
   @Override
   public void powerUp(int numero) {
     switch(numero){
@@ -46,10 +45,10 @@ public class Korby extends Personaje implements AtaqueNientiendo {
   public String ataque(Personaje personaje) {
     return this.ataque.atacar(personaje);
   }
-
+/*
   @Override
   public String atacar(Personaje personaje) {
     return ataqueBase(personaje);
   }
-    
+  */  
 }

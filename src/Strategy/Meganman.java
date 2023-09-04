@@ -2,12 +2,11 @@ package Strategy;
 import Strategy.Copcam.Fireman;
 import Strategy.Copcam.Gutsman;
 import Strategy.Copcam.Iceman;
-import Observer.Arena;
+import AtaqueCopcam;
 public class Meganman extends Personaje implements AtaqueCopcam{
   AtaqueCopcam ataque;
-  public Meganman(Arena arena){
+  public Meganman(){
     this.nombre = "Meganman";
-    this.arena = arena; 
     this.vida = 120;
   }
 
@@ -16,14 +15,14 @@ public class Meganman extends Personaje implements AtaqueCopcam{
     personaje.setVida(personaje.getVida()-10);
     return "Meganman disparo balitas a " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n';
   }
-
+/*
   @Override
   public void setAtaque(Ataque ataque) throws Exception {
     if(!(ataque instanceof AtaqueCopcam))
       throw new Exception("Error en transformación de Dittu");
     this.ataque = (AtaqueCopcam) ataque;
   }
-
+*/
   @Override
   public void powerUp(int numero) {
     switch (numero) {
@@ -42,10 +41,10 @@ public class Meganman extends Personaje implements AtaqueCopcam{
   public String ataque(Personaje personaje) {
     return this.ataque.atacar(personaje);
   }
-
+/*
   @Override
   public String atacar(Personaje personaje) {
     return ataqueBase(personaje);
   }
-  
+  */
 }
