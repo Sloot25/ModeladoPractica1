@@ -1,12 +1,12 @@
 Korby le dio un sape a Meganman
 La vida actual de Meganman es 110
-Korby le dio un sape a Meganman
-La vida actual de Meganman es 110
-Meganman disparo balitas a Dittu
-La vida actual de Dittu es 100
-Korby le dio un sape a Meganman
-La vida actual de Meganman es 110
 Meganman disparo balitas a Dittu
 La vida actual de Dittu es 100
 Dittu le ha escupido a Meganman
 La vida actual de Meganman es 100
+Dittu se transformo en Voltorb
+Voltorb ha explotado Korby
+La vida actual de Korby es 50
+Korby se comio a VoidTermina
+Void Termina ha atacado con un rayo laser a Meganman
+La vida actual de Meganman es 10

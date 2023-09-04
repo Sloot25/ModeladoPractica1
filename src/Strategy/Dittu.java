@@ -14,7 +14,7 @@ public class Dittu extends Personaje{
   @Override
   public String ataqueBase(Personaje personaje) {
     personaje.setVida(personaje.getVida()-10);
-    return "Dittu le ha escupido a " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n';
+    return "Dittu le ha escupido a " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n'+ estaVivo(personaje);
   }
 /*
   @Override
@@ -29,20 +29,20 @@ public class Dittu extends Personaje{
     switch(numero){
       case 0: 
         this.ataque = new Arceus();
-        return "Dittu se transformo en Arceus";
+        return "Dittu se transformo en Arceus\n";
       case 1: 
         this.ataque = new Snorlax();
-        return "Dittu se transformo en Snorlax";
+        return "Dittu se transformo en Snorlax\n";
       case 2: 
         this.ataque = new Voltorb();
-        return "Dittu se transformo en Voltorb";
+        return "Dittu se transformo en Voltorb\n";
     }
     return "";
   }
 
   @Override
   public String ataque(Personaje personaje) {
-    return this.ataque.atacar(personaje);
+    return this.ataque.atacar(personaje) + this.estaVivo(personaje);
   }
   /*
   @Override

@@ -21,6 +21,10 @@ public class Arena implements Subject{
     for(Observer user : usuarios)
       user.update(mensaje);
   }
+  public void closeFicheros(){
+    for(Observer user : usuarios)
+      ((User)user).closeFichero();
+  }
   public void combate(){
     Personaje kirby = new Korby();
     Personaje meganman = new Meganman();
@@ -29,12 +33,11 @@ public class Arena implements Subject{
     notifyUser(kirby.ataqueBase(meganman));
     notifyUser(meganman.ataqueBase(dittu));
     notifyUser(dittu.ataqueBase(meganman));
-    for(Observer user : usuarios)
-      ((User) user).closeFichero();
- /*   notifyUser(dittu.powerUp(2));
+
+    notifyUser(dittu.powerUp(2));
     notifyUser(dittu.ataque(kirby));
     notifyUser(kirby.powerUp(1));
     notifyUser(kirby.ataque(meganman));
-*/
+    closeFicheros();
   }
 }

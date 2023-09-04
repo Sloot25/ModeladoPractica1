@@ -16,7 +16,7 @@ public class Korby extends Personaje {
   @Override
   public String ataqueBase(Personaje personaje) {
     personaje.setVida(personaje.getVida()-10); 
-    return "Korby le dio un sape a " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n';
+    return "Korby le dio un sape a " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n' + estaVivo(personaje);
   }
 /*
   @Override
@@ -30,21 +30,22 @@ public class Korby extends Personaje {
   public String powerUp(int numero) {
     switch(numero){
       case 0: 
-        this.ataque = (AtaqueNientiendo) new MetaKnight();
-        return "Korby se comio a MetaKnight";
+        this.ataque =  new MetaKnight();
+        return "Korby se comio a MetaKnight\n";
       case 1: 
-        this.ataque = (AtaqueNientiendo) new VoidTermina();
-        return "Korby se comio a VoidTermina";
+        this.ataque =  new VoidTermina();
+        return "Korby se comio a VoidTermina\n";
       case 2: 
         this.ataque = new KingDedede();
-        return "Korby se comio a KingDedede";
+        return "Korby se comio a KingDedede\n";
     }
     return "";
   }
 
   @Override
   public String ataque(Personaje personaje) {
-    return this.ataque.atacar(personaje);
+    return this.ataque.atacar(personaje) + this.estaVivo(personaje);
+    
   }
 /*
   @Override

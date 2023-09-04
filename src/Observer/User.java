@@ -55,6 +55,7 @@ public class User implements Observer{
   }
   public void closeFichero(){
     try{
+      this.pw.close();
       this.fw.close();
     }catch(Exception e){
       System.err.println("Error al cerrar el archivo");

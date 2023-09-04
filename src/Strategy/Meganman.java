@@ -13,7 +13,7 @@ public class Meganman extends Personaje {
   @Override
   public String ataqueBase(Personaje personaje) {
     personaje.setVida(personaje.getVida()-10);
-    return "Meganman disparo balitas a " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n';
+    return "Meganman disparo balitas a " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n' + estaVivo(personaje);
   }
 /*
   @Override
@@ -28,20 +28,20 @@ public class Meganman extends Personaje {
     switch (numero) {
       case 0:
         this.ataque = new Gutsman();
-        return "Menganman absorbio el poder de Gutsman";
+        return "Menganman absorbio el poder de Gutsman\n";
       case 1: 
         this.ataque = new Fireman();
-        return "Meganman absorbio el poder de Fireman";
+        return "Meganman absorbio el poder de Fireman\n";
       case 2: 
         this.ataque = new Iceman();
-        return "Meganman absorbio el poder de Iceman";
+        return "Meganman absorbio el poder de Iceman\n";
     }
     return "";
   }
 
   @Override
   public String ataque(Personaje personaje) {
-    return this.ataque.atacar(personaje);
+    return this.ataque.atacar(personaje) + this.estaVivo(personaje);
   }
 /*
   @Override

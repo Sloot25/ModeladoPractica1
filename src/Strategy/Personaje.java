@@ -17,6 +17,12 @@ public abstract class Personaje {
   public void setVida(int vida) {
       this.vida = vida;
   }
+  public String estaVivo(Personaje personaje){
+    if(personaje.getVida() > 0) 
+      return "";
+    else 
+      return personaje.getNombre() + " se ha quedado sin vida\n";
+  }
   abstract public String ataqueBase(Personaje personaje); //abstract public void setAtaque(Ataque ataque) throws Exception;
   abstract public String powerUp(int numero);
   abstract public String ataque(Personaje personaje);
