@@ -6,8 +6,7 @@ import Strategy.Chinpokomon.Voltorb;
 import Strategy.AtaqueChimpokomon;
 public class Dittu extends Personaje{
   AtaqueChimpokomon ataque;
-  public Dittu(Arena arena){
-    this.arena = arena; 
+  public Dittu(){
     this.nombre = "Dittu";
     this.vida = 110;
   }
@@ -26,18 +25,19 @@ public class Dittu extends Personaje{
   }
 */
   @Override
-  public void powerUp(int numero) {
+  public String powerUp(int numero) {
     switch(numero){
       case 0: 
-        this.ataque = new Arceus(arena);
-        break; 
+        this.ataque = new Arceus();
+        return "Dittu se transformo en Arceus";
       case 1: 
-        this.ataque = new Snorlax(arena);
-        break; 
+        this.ataque = new Snorlax();
+        return "Dittu se transformo en Snorlax";
       case 2: 
-        this.ataque = new Voltorb(arena);
-        break;
+        this.ataque = new Voltorb();
+        return "Dittu se transformo en Voltorb";
     }
+    return "";
   }
 
   @Override

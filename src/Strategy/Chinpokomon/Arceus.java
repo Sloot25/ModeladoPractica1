@@ -3,7 +3,7 @@ import Observer.Arena;
 import Strategy.Dittu;
 import Strategy.Personaje;
 import Strategy.AtaqueChimpokomon;
-public class Arceus implements AtaqueChinpokomon{
+public class Arceus implements AtaqueChimpokomon{
   /*
   public Arceus(Arena arena) {
     super(arena);

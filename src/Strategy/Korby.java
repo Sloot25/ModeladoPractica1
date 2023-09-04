@@ -8,7 +8,7 @@ import Strategy.AtaqueNientiendo;
 public class Korby extends Personaje {
   AtaqueNientiendo ataque;  
 
-  public Korby(Arena arena){
+  public Korby(){
     this.vida = 100; 
     this.nombre = "Korby";
   }
@@ -27,18 +27,19 @@ public class Korby extends Personaje {
   }
 */
   @Override
-  public void powerUp(int numero) {
+  public String powerUp(int numero) {
     switch(numero){
       case 0: 
-        this.ataque = (AtaqueNientiendo) new MetaKnight(arena);
-        break; 
+        this.ataque = (AtaqueNientiendo) new MetaKnight();
+        return "Korby se comio a MetaKnight";
       case 1: 
-        this.ataque = (AtaqueNientiendo) new VoidTermina(arena);
-        break; 
+        this.ataque = (AtaqueNientiendo) new VoidTermina();
+        return "Korby se comio a VoidTermina";
       case 2: 
-        this.ataque = new KingDedede(arena);
-        break;
+        this.ataque = new KingDedede();
+        return "Korby se comio a KingDedede";
     }
+    return "";
   }
 
   @Override

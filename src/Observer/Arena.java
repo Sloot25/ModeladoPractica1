@@ -1,9 +1,14 @@
 package Observer;
-import java.util.List;
+import java.util.ArrayList;
+import Observer.User;
+import Strategy.Korby; 
+import Strategy.Meganman;
+import Strategy.Dittu;
+import Strategy.Personaje;
 public class Arena implements Subject{
-  List<Observer> usuarios;
+  ArrayList<Observer> usuarios;
   public Arena(){
-    this.usuarios = new List<Observer>();
+    this.usuarios = new ArrayList<Observer>();
   }
   public void addUser(Observer user){
     usuarios.add(user);
@@ -17,17 +22,19 @@ public class Arena implements Subject{
       user.update(mensaje);
   }
   public void combate(){
-    Personaje kirby = new Kirby();
+    Personaje kirby = new Korby();
     Personaje meganman = new Meganman();
     Personaje dittu = new Dittu();
 
-    notifyUser(kirby.ataquebase(meganman));
-    notifyUser(meganman.ataquebase(dittu));
-    notifyUser(dittu.ataquebase(meganman));
-    notifyUser(dittu.powerup(2));
+    notifyUser(kirby.ataqueBase(meganman));
+    notifyUser(meganman.ataqueBase(dittu));
+    notifyUser(dittu.ataqueBase(meganman));
+    for(Observer user : usuarios)
+      ((User) user).closeFichero();
+ /*   notifyUser(dittu.powerUp(2));
     notifyUser(dittu.ataque(kirby));
-    notifyUser(kirby.powerup(1));
+    notifyUser(kirby.powerUp(1));
     notifyUser(kirby.ataque(meganman));
-
+*/
   }
 }

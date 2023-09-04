@@ -17,8 +17,7 @@ public abstract class Personaje {
   public void setVida(int vida) {
       this.vida = vida;
   }
-  abstract public String ataqueBase(Personaje personaje);
-  //abstract public void setAtaque(Ataque ataque) throws Exception;
-  abstract public void powerUp(int numero);
+  abstract public String ataqueBase(Personaje personaje); //abstract public void setAtaque(Ataque ataque) throws Exception;
+  abstract public String powerUp(int numero);
   abstract public String ataque(Personaje personaje);
 }

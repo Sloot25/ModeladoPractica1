@@ -2,8 +2,8 @@ package Strategy;
 import Strategy.Copcam.Fireman;
 import Strategy.Copcam.Gutsman;
 import Strategy.Copcam.Iceman;
-import AtaqueCopcam;
-public class Meganman extends Personaje implements AtaqueCopcam{
+import Strategy.AtaqueCopcam;
+public class Meganman extends Personaje {
   AtaqueCopcam ataque;
   public Meganman(){
     this.nombre = "Meganman";
@@ -24,17 +24,19 @@ public class Meganman extends Personaje implements AtaqueCopcam{
   }
 */
   @Override
-  public void powerUp(int numero) {
+  public String powerUp(int numero) {
     switch (numero) {
       case 0:
-        this.ataque = new Gutsman(arena);
-        break;
+        this.ataque = new Gutsman();
+        return "Menganman absorbio el poder de Gutsman";
       case 1: 
-        this.ataque = new Fireman(arena);
-        break;
+        this.ataque = new Fireman();
+        return "Meganman absorbio el poder de Fireman";
       case 2: 
-        this.ataque = new Iceman(arena);
+        this.ataque = new Iceman();
+        return "Meganman absorbio el poder de Iceman";
     }
+    return "";
   }
 
   @Override
