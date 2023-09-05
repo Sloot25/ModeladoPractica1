@@ -18,7 +18,7 @@ public class Main {
     arena.addUser(panchito);
     arena.addUser(jaimito);
     arena.addUser(rubiocai);
-    arena.combate();
+    arena.combate3();
 
   }
 }

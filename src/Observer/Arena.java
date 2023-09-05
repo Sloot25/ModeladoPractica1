@@ -42,6 +42,52 @@ public class Arena implements Subject{
     
     closeFicheros();
   }
+  public void combate2(){
+    Personaje korby = new Korby();
+    Personaje meganman = new Meganman();
+    Personaje dittu = new Dittu();
+
+    for(int i = 0; i < 11; i++){
+      notifyUser(korby.ataqueBase(meganman));
+      notifyUser(meganman.ataqueBase(dittu));
+      notifyUser(dittu.ataqueBase(korby));
+    }
+    closeFicheros();
+  }
+
+  public void combate3(){
+    Personaje korby = new Korby();
+    Personaje meganman = new Meganman();
+    Personaje dittu = new Dittu();
+    notifyUser(korby.ataqueBase(meganman));
+    notifyUser(dittu.ataqueBase(meganman));
+    notifyUser(korby.ataqueBase(meganman));
+    notifyUser(dittu.ataqueBase(meganman));
+    notifyUser(korby.ataqueBase(meganman));
+    notifyUser(korby.powerUp(0));
+    notifyUser(meganman.powerUp(0));
+    notifyUser(korby.ataque(dittu));
+    notifyUser(meganman.ataque(dittu));
+    notifyUser(korby.ataque(dittu));
+    notifyUser(meganman.ataque(dittu));
+    notifyUser(korby.ataque(dittu));
+    notifyUser(meganman.ataque(dittu));
+    notifyUser(korby.ataque(dittu));
+    notifyUser(meganman.ataque(dittu));
+    notifyUser(korby.ataque(dittu));
+    notifyUser(meganman.ataque(dittu));
+    notifyUser(korby.ataque(dittu));
+    notifyUser(meganman.ataque(dittu));
+    notifyUser(korby.powerUp(2));
+    notifyUser(dittu.powerUp(2));
+    notifyUser(korby.ataque(meganman));
+    notifyUser(dittu.ataque(meganman));
+    notifyUser(korby.ataque(meganman));
+    notifyUser(dittu.ataque(meganman));
+    notifyUser(korby.ataque(meganman));
+    notifyUser(dittu.ataque(meganman));
+    closeFicheros();
+  }
   public String getCombate(){
     return combateString; 
   }
