@@ -10,6 +10,6 @@ public class Snorlax implements AtaqueChimpokomon{
   }
 */
   public String atacar(Personaje personaje){
-    return "Snorlax se ha dormido" + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n';
+    return "Snorlax se ha dormido frente a " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n';
   }
 }

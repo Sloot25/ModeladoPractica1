@@ -7,6 +7,7 @@ import Strategy.Dittu;
 import Strategy.Personaje;
 public class Arena implements Subject{
   ArrayList<Observer> usuarios;
+  private String combateString;
   public Arena(){
     this.usuarios = new ArrayList<Observer>();
   }
@@ -29,7 +30,6 @@ public class Arena implements Subject{
     Personaje kirby = new Korby();
     Personaje meganman = new Meganman();
     Personaje dittu = new Dittu();
-
     notifyUser(kirby.ataqueBase(meganman));
     notifyUser(meganman.ataqueBase(dittu));
     notifyUser(dittu.ataqueBase(meganman));
@@ -41,5 +41,8 @@ public class Arena implements Subject{
     notifyUser(kirby.ataque(meganman));
     
     closeFicheros();
+  }
+  public String getCombate(){
+    return combateString; 
   }
 }
