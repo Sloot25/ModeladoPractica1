@@ -23,6 +23,9 @@ public abstract class Personaje {
     else 
       return personaje.getNombre() + " se ha quedado sin vida\n";
   }
+  public String ganoCombate(Personaje personaje){
+    return personaje.getNombre() + " ha ganado el combate";
+  }
   abstract public String ataqueBase(Personaje personaje); //abstract public void setAtaque(Ataque ataque) throws Exception;
   abstract public String powerUp(int numero);
   abstract public String ataque(Personaje personaje);

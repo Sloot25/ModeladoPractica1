@@ -38,6 +38,8 @@ public class Arena implements Subject{
     notifyUser(dittu.ataque(kirby));
     notifyUser(kirby.powerUp(1));
     notifyUser(kirby.ataque(meganman));
+    notifyUser(kirby.ataque(meganman));
+    
     closeFicheros();
   }
 }

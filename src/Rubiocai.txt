@@ -1,3 +1,4 @@
+Has seleccionado a Korby
 Korby le dio un sape a Meganman
 La vida actual de Meganman es 110
 Meganman disparo balitas a Dittu
@@ -10,3 +11,6 @@ La vida actual de Korby es 50
 Korby se comio a VoidTermina
 Void Termina ha atacado con un rayo laser a Meganman
 La vida actual de Meganman es 10
+Void Termina ha atacado con un rayo laser a Meganman
+La vida actual de Meganman es -80
+Meganman se ha quedado sin vida

@@ -14,7 +14,6 @@ public class User implements Observer{
   PrintWriter pw;
   FileWriter fw;
   String mensaje;
-  // Personaje personaje; Hay que descomentarla cuando terminemos la clase de Strategy
   public User(String nombre, Personaje personaje, Arena arena){
     this.nombre = nombre; 
     this.personaje = personaje; 
@@ -22,8 +21,8 @@ public class User implements Observer{
     mensaje ="";
     try{
       this.fw = new FileWriter(nombre+".txt");
-      this.bf = new BufferedWriter(new FileWriter(nombre+".txt"));
       this.pw = new PrintWriter(fw);
+      this.pw.write("Has seleccionado a "+ personaje.getNombre() + '\n');
     }catch(Exception e){
       System.err.println("Error al escribir el fichero");
     }
@@ -36,8 +35,9 @@ public class User implements Observer{
     this.nombre = String.valueOf(rnd.nextInt(100));
     mensaje = "";
     try{
-    this.bf = new BufferedWriter(new FileWriter(nombre+".txt"));
-      this.pw = new PrintWriter(new FileWriter(nombre+".txt"));
+      this.fw = new FileWriter(nombre+".txt");
+      this.pw = new PrintWriter(fw);
+      this.pw.write("Has seleccionado a "+ personaje.getNombre() + '\n');
     }catch(Exception e){
       System.err.println("Error al escribir el fichero");
     }
@@ -47,6 +47,10 @@ public class User implements Observer{
   public void update(String mensaje) {
     try{
       System.out.println(mensaje);
+      if(mensaje.contains(personaje.getNombre() + " ha ganado el combate")){
+        mensaje += "Tu personaje ha ganado el combate\n";
+      } else if(mensaje.contains(personaje.getNombre() + " se ha quedado sin vida"))
+        mensaje += "Tu personaje ha muerto\n";
       pw.write(mensaje);
     }catch(Exception e){
       System.err.println("Error al escribir mensaje");
@@ -56,7 +60,6 @@ public class User implements Observer{
   public void closeFichero(){
     try{
       this.pw.close();
-      this.fw.close();
     }catch(Exception e){
       System.err.println("Error al cerrar el archivo");
     }
