@@ -38,7 +38,6 @@ public abstract class Personaje {
     else 
       return personaje.getNombre() + " se ha quedado sin vida\n";
   }
-<<<<<<< HEAD
 
    /*
    * Anuncia al personaje que recibe como ganador
@@ -49,10 +48,6 @@ public abstract class Personaje {
    */
   public String ganoCombate(Personaje personaje){
     return personaje.getNombre() + " ha ganado el combate";
-=======
-  public String ganoCombate(){
-    return getNombre() + " ha ganado el combate\n";
->>>>>>> d74113edb2277a356861a114e3e7de90cfa83998
   }
 
   abstract public String ataqueBase(Personaje personaje); //abstract public void setAtaque(Ataque ataque) throws Exception;
