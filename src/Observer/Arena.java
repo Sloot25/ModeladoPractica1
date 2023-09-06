@@ -1,3 +1,8 @@
+/*
+ * Sujeto concreto concreto
+ * 
+ * Clase encargada de actualizar el entorno (la arena de combate) y notificar a los personajes
+ */
 package Observer;
 import java.util.ArrayList;
 import Observer.User;
@@ -7,7 +12,6 @@ import Strategy.Dittu;
 import Strategy.Personaje;
 public class Arena implements Subject{
   ArrayList<Observer> usuarios;
-  private String combateString;
   public Arena(){
     this.usuarios = new ArrayList<Observer>();
   }
@@ -17,15 +21,30 @@ public class Arena implements Subject{
   public void removeUser(Observer user){
     usuarios.remove(user);
   }
+
+  /*
+   * Metodo encargado de notificar a todos los observadores
+   * 
+   * @param mensaje: mensaje a actualizar de los observadores
+   */
   @Override
   public void notifyUser(String mensaje){
     for(Observer user : usuarios)
       user.update(mensaje);
   }
+
+  /*
+   * Cierra el archivo txt de todos los observadores
+   */
   public void closeFicheros(){
     for(Observer user : usuarios)
       ((User)user).closeFichero();
   }
+
+  /*
+   * Combates disponibles, incluye la lista de metodos que ejecutan los personajes.
+   * Al finalizar el combate cierra los archivo txt
+   */
   public void combate(){
     Personaje kirby = new Korby();
     Personaje meganman = new Meganman();
@@ -42,6 +61,8 @@ public class Arena implements Subject{
     
     closeFicheros();
   }
+
+  
   public void combate2(){
     Personaje korby = new Korby();
     Personaje meganman = new Meganman();
@@ -88,7 +109,5 @@ public class Arena implements Subject{
     notifyUser(dittu.ataque(meganman));
     closeFicheros();
   }
-  public String getCombate(){
-    return combateString; 
-  }
+
 }

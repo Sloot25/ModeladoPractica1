@@ -11,6 +11,13 @@ public class Dittu extends Personaje{
     this.vida = 110;
   }
 
+  /*
+   * Especifica el ataquebase, actualiza la vida del personaje atacado
+   * 
+   * @param personaje: personaje atacado por Dittu
+   * 
+   * @return leyenda que indica el nombre del personaje y la vida restante 
+   */
   @Override
   public String ataqueBase(Personaje personaje) {
     personaje.setVida(personaje.getVida()-10);
@@ -24,6 +31,13 @@ public class Dittu extends Personaje{
     this.ataque = (AtaqueChimpokomon) ataque;
   }
 */
+  /*
+   * Modifica el ataque de acuerdo a la transformacion indicada
+   * 
+   * @param numero: clave de la transformacion
+   * 
+   * @return leyenda que indica en que se transformo 
+   */
   @Override
   public String powerUp(int numero) {
     switch(numero){
@@ -40,6 +54,13 @@ public class Dittu extends Personaje{
     return "";
   }
 
+  /*
+   * Ejecuta el ataque y verifica si esta vivo el personaje atacado 
+   * 
+   * @param personaje: personaje que sera atacado
+   * 
+   * @return leyenda que indica el personaje atacado, la vida restante y si murio cuando sea el caso 
+   */
   @Override
   public String ataque(Personaje personaje) {
     return this.ataque.atacar(personaje) + this.estaVivo(personaje);
