@@ -14,7 +14,6 @@ public class Main {
     arena.addUser(panchito);
     arena.addUser(jaimito);
     arena.addUser(rubiocai);
-    System.out.println(x);
     switch(x){
       case 0:
         arena.combate4();
