@@ -24,7 +24,7 @@ public class User implements Observer{
 
   /*
    * Constructor que además genera un archivo .txt con el nombre del usuario
-   * que sera su bitacora
+   * que sera su bitacora e inicializa los atributos
    * 
    * @param nombre: indica el nombre del usuario
    * @param personaje: recibe un objeto de tipo Personaje, (Korby, Dittu, Meganman) 
@@ -44,9 +44,12 @@ public class User implements Observer{
       System.err.println("Error al escribir el fichero");
     }
   }
+ 
   /*
-   * Metodo similar al anterior solo que para el caso en que no reciba nombre
-   * de usuario
+   * Constructor que además genera un archivo .txt con un nombre de usuario aleatorio e inicializa los atributos
+   * 
+   * @param personaje: recibe un objeto de tipo Personaje, (Korby, Dittu, Meganman) 
+   * @param arena: objeto proveniente de la clase Sujeto
    */
 
   public User(Personaje personaje, Arena arena){

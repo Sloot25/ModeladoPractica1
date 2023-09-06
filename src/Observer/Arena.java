@@ -25,7 +25,7 @@ public class Arena implements Subject{
   /*
    * Metodo encargado de notificar a todos los observadores
    * 
-   * @param mensaje: mensaje a actualizar de los observadores
+   * @param String mensaje: mensaje a actualizar de los observadores
    */
   @Override
   public void notifyUser(String mensaje){

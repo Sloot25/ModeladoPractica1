@@ -7,6 +7,11 @@ import Strategy.Nientiendo.KingDedede;
 import Strategy.AtaqueNientiendo;
 public class Korby extends Personaje {
   AtaqueNientiendo ataque;  
+  
+  /* Constructor del Personaje Korby, no recibe parametros y solo se encarga de inicializar 
+   * los atributos a valores por defecto
+   *
+   */
 
   public Korby(){
     this.vida = 100; 
@@ -27,13 +32,6 @@ public class Korby extends Personaje {
     return "Korby le dio un sape a " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n' + estaVivo(personaje);
   }
 /*
-  @Override
-  public void setAtaque(Ataque ataque) throws Exception {
-    if(!(ataque instanceof AtaqueNientiendo))
-      throw new Exception("Error en transformación de Dittu");
-    this.ataque = (AtaqueNientiendo) ataque;
-  }
-*/
 
   /*
    * Modifica el ataque de acuerdo a la transformacion indicada
@@ -70,10 +68,4 @@ public class Korby extends Personaje {
     return this.ataque.atacar(personaje) + this.estaVivo(personaje);
     
   }
-/*
-  @Override
-  public String atacar(Personaje personaje) {
-    return ataqueBase(personaje);
-  }
-  */  
 }

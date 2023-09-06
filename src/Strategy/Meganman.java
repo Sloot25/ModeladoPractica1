@@ -5,6 +5,12 @@ import Strategy.Copcam.Iceman;
 import Strategy.AtaqueCopcam;
 public class Meganman extends Personaje {
   AtaqueCopcam ataque;
+
+  /* Constructor del Personaje Meganman, no recibe parametros y solo se encarga de inicializar 
+   * los atributos a valores por defecto
+   *
+   */
+
   public Meganman(){
     this.nombre = "Meganman";
     this.vida = 120;
@@ -23,14 +29,6 @@ public class Meganman extends Personaje {
     personaje.setVida(vida);
     return "Meganman disparo balitas a " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n' + estaVivo(personaje);
   }
-/*
-  @Override
-  public void setAtaque(Ataque ataque) throws Exception {
-    if(!(ataque instanceof AtaqueCopcam))
-      throw new Exception("Error en transformación de Dittu");
-    this.ataque = (AtaqueCopcam) ataque;
-  }
-*/
 
   /*
    * Modifica el ataque de acuerdo a la transformacion indicada
@@ -66,10 +64,5 @@ public class Meganman extends Personaje {
   public String ataque(Personaje personaje) {
     return this.ataque.atacar(personaje) + this.estaVivo(personaje);
   }
-/*
-  @Override
-  public String atacar(Personaje personaje) {
-    return ataqueBase(personaje);
-  }
-  */
+
 }

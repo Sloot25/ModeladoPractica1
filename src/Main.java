@@ -2,6 +2,11 @@ import java.util.Random;
 import Strategy.*; 
 import Observer.*;
 public class Main {
+
+  /* Este metodo es el principal y se encarga de la ejecucion del programa a traves de un random para 
+   * elegir de forma aleatoria el combate a realizar
+   *
+   */
   public static void main(String[] args) {
     Arena arena = new Arena();
     Random random = new Random();
