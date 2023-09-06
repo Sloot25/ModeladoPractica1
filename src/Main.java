@@ -16,13 +16,11 @@ public class Main {
     arena.addUser(rubiocai);
     switch(x){
       case 0:
-        arena.combate();
+        arena.combate4();
       case 1:
         arena.combate2();
       case 2:
         arena.combate3();
-      default:
-        arena.combate4();
     }
   }
 }

@@ -26,32 +26,22 @@ public class Arena implements Subject{
     for(Observer user : usuarios)
       ((User)user).closeFichero();
   }
-  public void combate(){
-    Personaje kirby = new Korby();
-    Personaje meganman = new Meganman();
-    Personaje dittu = new Dittu();
-    notifyUser(kirby.ataqueBase(meganman));
-    notifyUser(meganman.ataqueBase(dittu));
-    notifyUser(dittu.ataqueBase(meganman));
 
-    notifyUser(dittu.powerUp(2));
-    notifyUser(dittu.ataque(kirby));
-    notifyUser(kirby.powerUp(1));
-    notifyUser(kirby.ataque(meganman));
-    notifyUser(kirby.ataque(meganman));
-    
-    closeFicheros();
-  }
   public void combate2(){
     Personaje korby = new Korby();
     Personaje meganman = new Meganman();
     Personaje dittu = new Dittu();
 
-    for(int i = 0; i < 11; i++){
+    for(int i = 0; i < 10; i++){
       notifyUser(korby.ataqueBase(meganman));
       notifyUser(meganman.ataqueBase(dittu));
       notifyUser(dittu.ataqueBase(korby));
     }
+    notifyUser(meganman.ataqueBase(dittu));
+    notifyUser(dittu.ataqueBase(meganman));
+    notifyUser(meganman.ataqueBase(dittu));
+    notifyUser(meganman.ganoCombate());
+    notifyUser(combateFinalizado());
     closeFicheros();
   }
 
@@ -86,6 +76,7 @@ public class Arena implements Subject{
     notifyUser(dittu.ataque(meganman));
     notifyUser(korby.ataque(meganman));
     notifyUser(dittu.ataque(meganman));
+    notifyUser(combateFinalizado());
     closeFicheros();
   }
   public void combate4(){
@@ -95,11 +86,12 @@ public class Arena implements Subject{
     notifyUser(dittu.powerUp(0));
     notifyUser(dittu.ataque(korby));
     notifyUser(dittu.ataque(meganman));
-    notifyUser(dittu.ataque(korby));
     notifyUser(dittu.ataque(meganman));
+    notifyUser(dittu.ganoCombate());
+    notifyUser(combateFinalizado());
     closeFicheros();
   }
-  public String getCombate(){
-    return combateString; 
+  private String combateFinalizado(){
+    return "El combate ha finalizado\n";
   }
 }

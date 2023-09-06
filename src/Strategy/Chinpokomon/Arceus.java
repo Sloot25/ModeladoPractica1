@@ -10,7 +10,8 @@ public class Arceus implements AtaqueChimpokomon{
   }
 */
   public String atacar(Personaje personaje){
-    personaje.setVida(personaje.getVida()-100);
+    int vida = (personaje.getVida() - 100 < 0) ? 0 : personaje.getVida() - 100; 
+    personaje.setVida(vida);
     return "Arceus ha usado canto mortal " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n';  
   }
 }
