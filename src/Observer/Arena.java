@@ -22,7 +22,7 @@ public class Arena implements Subject{
     for(Observer user : usuarios)
       user.update(mensaje);
   }
-  public void closeFicheros(){
+  private void closeFicheros(){
     for(Observer user : usuarios)
       ((User)user).closeFichero();
   }
