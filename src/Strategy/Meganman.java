@@ -10,6 +10,13 @@ public class Meganman extends Personaje {
     this.vida = 120;
   }
 
+  /*
+   * Especifica el ataquebase, actualiza la vida del personaje atacado
+   * 
+   * @param personaje: personaje atacado por Meganman
+   * 
+   * @return leyenda que indica el nombre del personaje y la vida restante 
+   */
   @Override
   public String ataqueBase(Personaje personaje) {
     int vida = (personaje.getVida()-10 < 0) ? 0 : personaje.getVida()-10;
@@ -24,6 +31,14 @@ public class Meganman extends Personaje {
     this.ataque = (AtaqueCopcam) ataque;
   }
 */
+
+  /*
+   * Modifica el ataque de acuerdo a la transformacion indicada
+   * 
+   * @param numero: clave de la transformacion
+   * 
+   * @return leyenda que indica en que se transformo 
+   */
   @Override
   public String powerUp(int numero) {
     switch (numero) {
@@ -40,6 +55,13 @@ public class Meganman extends Personaje {
     return "";
   }
 
+   /*
+   * Ejecuta el ataque y verifica si esta vivo el personaje atacado 
+   * 
+   * @param personaje: personaje que sera atacado
+   * 
+   * @return leyenda que indica el personaje atacado, la vida restante y si murio cuando sea el caso 
+   */
   @Override
   public String ataque(Personaje personaje) {
     return this.ataque.atacar(personaje) + this.estaVivo(personaje);

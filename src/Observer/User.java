@@ -1,3 +1,10 @@
+/*
+ * Observador concreto
+ * 
+ * Clase encargada de recibir notificaciones por parte del sujeto (clase Arena)
+ */
+
+
 package Observer;
 import java.util.Random;
 import Strategy.Personaje; 
@@ -14,6 +21,16 @@ public class User implements Observer{
   PrintWriter pw;
   FileWriter fw;
   String mensaje;
+
+  /*
+   * Constructor que además genera un archivo .txt con el nombre del usuario
+   * que sera su bitacora
+   * 
+   * @param nombre: indica el nombre del usuario
+   * @param personaje: recibe un objeto de tipo Personaje, (Korby, Dittu, Meganman) 
+   * @param arena: objeto proveniente de la clase Sujeto
+   */
+
   public User(String nombre, Personaje personaje, Arena arena){
     this.nombre = nombre; 
     this.personaje = personaje; 
@@ -27,6 +44,10 @@ public class User implements Observer{
       System.err.println("Error al escribir el fichero");
     }
   }
+  /*
+   * Metodo similar al anterior solo que para el caso en que no reciba nombre
+   * de usuario
+   */
 
   public User(Personaje personaje, Arena arena){
     this.arena = arena; 
@@ -43,6 +64,11 @@ public class User implements Observer{
     }
   }
 
+  /*
+   * Metodo encargado de imprimir el mensaje que recibe, ademas de 
+   * 
+   * @param mensaje: Texto que se actualiza por cada accion/notificacion de un personaje
+   */
   @Override
   public void update(String mensaje) {
     try{
@@ -54,8 +80,11 @@ public class User implements Observer{
     }catch(Exception e){
       System.err.println("Error al escribir mensaje");
     }
-
   }
+
+  /*
+   * Cierra el archivo
+   */
   public void closeFichero(){
     try{
       this.pw.close();
@@ -64,4 +93,5 @@ public class User implements Observer{
     }
   }
   
+
 }
