@@ -88,6 +88,17 @@ public class Arena implements Subject{
     notifyUser(dittu.ataque(meganman));
     closeFicheros();
   }
+  public void combate4(){
+    Personaje korby = new Korby();
+    Personaje meganman = new Meganman();
+    Personaje dittu = new Dittu();
+    notifyUser(dittu.powerUp(0));
+    notifyUser(dittu.ataque(korby));
+    notifyUser(dittu.ataque(meganman));
+    notifyUser(dittu.ataque(korby));
+    notifyUser(dittu.ataque(meganman));
+    closeFicheros();
+  }
   public String getCombate(){
     return combateString; 
   }
