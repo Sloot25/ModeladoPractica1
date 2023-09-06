@@ -1,15 +1,11 @@
 import java.util.Random; 
-import Strategy.Personaje;
-import Strategy.Dittu;
-import Strategy.Korby;
-import Strategy.Meganman;
-import Observer.Arena;
-import Observer.User;
 import Strategy.*; 
 import Observer.*;
 public class Main {
   public static void main(String[] args) {
     Arena arena = new Arena();
+    Random random = new Random();
+    int x = random.nextInt(3);
     Observer pepito = new User("Pepito", new Korby(), arena);
     Observer panchito = new User("Panchito", new Dittu(), arena);
     Observer jaimito = new User("Jaimito", new Meganman(), arena);
@@ -18,7 +14,13 @@ public class Main {
     arena.addUser(panchito);
     arena.addUser(jaimito);
     arena.addUser(rubiocai);
-    arena.combate3();
-
+    switch(x){
+      case 0:
+        arena.combate4();
+      case 1:
+        arena.combate2();
+      case 2:
+        arena.combate3();
+    }
   }
 }

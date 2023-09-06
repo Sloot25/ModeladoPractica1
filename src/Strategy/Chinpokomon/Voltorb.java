@@ -16,7 +16,8 @@ public class Voltorb implements AtaqueChimpokomon{
    */
   public Voltorb(){}
     public String atacar(Personaje personaje){
-      personaje.setVida(personaje.getVida()-50);
+      int vida = (personaje.getVida() -  50 < 0) ? 0 : personaje.getVida() - 50;
+      personaje.setVida(vida);
       return "Voltorb ha explotado " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n';  
   }
 }

@@ -72,11 +72,10 @@ public class User implements Observer{
   @Override
   public void update(String mensaje) {
     try{
-      System.out.println(mensaje);
-      if(mensaje.contains(personaje.getNombre() + " ha ganado el combate")){
+      if(mensaje.contains(personaje.getNombre() + " ha ganado el combate"))
         mensaje += "Tu personaje ha ganado el combate\n";
-      } else if(mensaje.contains(personaje.getNombre() + " se ha quedado sin vida"))
-        mensaje += "Tu personaje ha muerto\n";
+      else if(mensaje.contains(personaje.getNombre() + " se ha quedado sin vida"))
+        mensaje += "Tu personaje ha muerto\n" + "Tu personaje ha perdido el combate\n";
       pw.write(mensaje);
     }catch(Exception e){
       System.err.println("Error al escribir mensaje");

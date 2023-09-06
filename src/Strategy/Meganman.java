@@ -19,7 +19,8 @@ public class Meganman extends Personaje {
    */
   @Override
   public String ataqueBase(Personaje personaje) {
-    personaje.setVida(personaje.getVida()-10);
+    int vida = (personaje.getVida()-10 < 0) ? 0 : personaje.getVida()-10;
+    personaje.setVida(vida);
     return "Meganman disparo balitas a " + personaje.getNombre() + '\n' + "La vida actual de " + personaje.getNombre() + " es " + personaje.getVida() + '\n' + estaVivo(personaje);
   }
 /*

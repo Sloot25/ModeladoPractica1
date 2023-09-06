@@ -3,15 +3,71 @@ Korby le dio un sape a Meganman
 La vida actual de Meganman es 110
 Meganman disparo balitas a Dittu
 La vida actual de Dittu es 100
-Dittu le ha escupido a Meganman
+Dittu le ha escupido a Korby
+La vida actual de Korby es 90
+Korby le dio un sape a Meganman
 La vida actual de Meganman es 100
-Dittu se transformo en Voltorb
-Voltorb ha explotado Korby
+Meganman disparo balitas a Dittu
+La vida actual de Dittu es 90
+Dittu le ha escupido a Korby
+La vida actual de Korby es 80
+Korby le dio un sape a Meganman
+La vida actual de Meganman es 90
+Meganman disparo balitas a Dittu
+La vida actual de Dittu es 80
+Dittu le ha escupido a Korby
+La vida actual de Korby es 70
+Korby le dio un sape a Meganman
+La vida actual de Meganman es 80
+Meganman disparo balitas a Dittu
+La vida actual de Dittu es 70
+Dittu le ha escupido a Korby
+La vida actual de Korby es 60
+Korby le dio un sape a Meganman
+La vida actual de Meganman es 70
+Meganman disparo balitas a Dittu
+La vida actual de Dittu es 60
+Dittu le ha escupido a Korby
 La vida actual de Korby es 50
-Korby se comio a VoidTermina
-Void Termina ha atacado con un rayo laser a Meganman
+Korby le dio un sape a Meganman
+La vida actual de Meganman es 60
+Meganman disparo balitas a Dittu
+La vida actual de Dittu es 50
+Dittu le ha escupido a Korby
+La vida actual de Korby es 40
+Korby le dio un sape a Meganman
+La vida actual de Meganman es 50
+Meganman disparo balitas a Dittu
+La vida actual de Dittu es 40
+Dittu le ha escupido a Korby
+La vida actual de Korby es 30
+Korby le dio un sape a Meganman
+La vida actual de Meganman es 40
+Meganman disparo balitas a Dittu
+La vida actual de Dittu es 30
+Dittu le ha escupido a Korby
+La vida actual de Korby es 20
+Korby le dio un sape a Meganman
+La vida actual de Meganman es 30
+Meganman disparo balitas a Dittu
+La vida actual de Dittu es 20
+Dittu le ha escupido a Korby
+La vida actual de Korby es 10
+Korby le dio un sape a Meganman
+La vida actual de Meganman es 20
+Meganman disparo balitas a Dittu
+La vida actual de Dittu es 10
+Dittu le ha escupido a Korby
+La vida actual de Korby es 0
+Korby se ha quedado sin vida
+Meganman disparo balitas a Dittu
+La vida actual de Dittu es 0
+Dittu se ha quedado sin vida
+Dittu le ha escupido a Meganman
 La vida actual de Meganman es 10
-Void Termina ha atacado con un rayo laser a Meganman
-La vida actual de Meganman es -80
-Meganman se ha quedado sin vida
-Tu personaje ha muerto
+Meganman disparo balitas a Dittu
+La vida actual de Dittu es 0
+Dittu se ha quedado sin vida
+Meganman ha ganado el combate
+Tu personaje ha ganado el combate
+El combate ha finalizado
