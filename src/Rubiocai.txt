@@ -1,66 +1,38 @@
 Has seleccionado a Korby
-Korby le dio un sape a Meganman
+Korby le dio un sape a Dittu
+La vida actual de Dittu es 100
+Dittu le ha escupido a Meganman
 La vida actual de Meganman es 110
-Dittu le ha escupido a Meganman
+Korby le dio un sape a Meganman
 La vida actual de Meganman es 100
-Korby le dio un sape a Meganman
-La vida actual de Meganman es 90
 Dittu le ha escupido a Meganman
-La vida actual de Meganman es 80
-Korby le dio un sape a Meganman
-La vida actual de Meganman es 70
+La vida actual de Meganman es 90
+Dittu le ha escupido a Korby
+La vida actual de Korby es 90
+Meganman disparo balitas a Korby
+La vida actual de Korby es 80
+Dittu le ha escupido a Korby
+La vida actual de Korby es 70
+Meganman disparo balitas a Dittu
+La vida actual de Dittu es 90
+Korby le dio un sape a Dittu
+La vida actual de Dittu es 80
+Meganman disparo balitas a Dittu
+La vida actual de Dittu es 70
 Korby se comio a MetaKnight
 Menganman absorbio el poder de Gutsman
 Meta Knight ha cortado con su espada a Dittu
-La vida actual de Dittu es 80
+La vida actual de Dittu es 40
 Gutsman agarro a golpes a Dittu
-La vida actual de Dittu es 50
-Meta Knight ha cortado con su espada a Dittu
-La vida actual de Dittu es 20
-Gutsman agarro a golpes a Dittu
-La vida actual de Dittu es 0
-Dittu se ha quedado sin vida
-Meta Knight ha cortado con su espada a Dittu
-La vida actual de Dittu es 0
-Dittu se ha quedado sin vida
-Gutsman agarro a golpes a Dittu
-La vida actual de Dittu es 0
-Dittu se ha quedado sin vida
-Meta Knight ha cortado con su espada a Dittu
-La vida actual de Dittu es 0
-Dittu se ha quedado sin vida
-Gutsman agarro a golpes a Dittu
-La vida actual de Dittu es 0
-Dittu se ha quedado sin vida
-Meta Knight ha cortado con su espada a Dittu
-La vida actual de Dittu es 0
-Dittu se ha quedado sin vida
-Gutsman agarro a golpes a Dittu
-La vida actual de Dittu es 0
-Dittu se ha quedado sin vida
-Meta Knight ha cortado con su espada a Dittu
-La vida actual de Dittu es 0
-Dittu se ha quedado sin vida
-Gutsman agarro a golpes a Dittu
-La vida actual de Dittu es 0
-Dittu se ha quedado sin vida
-Korby se comio a KingDedede
-Dittu se transformo en Voltorb
-King Dedede le ha metido un martillazo a Meganman
-La vida actual de Meganman es 50
-Voltorb ha explotado Meganman
+La vida actual de Dittu es 10
+Dittu se transformo en Arceus
+Arceus ha usado canto mortal Meganman
 La vida actual de Meganman es 0
 Meganman se ha quedado sin vida
-King Dedede le ha metido un martillazo a Meganman
-La vida actual de Meganman es 0
-Meganman se ha quedado sin vida
-Voltorb ha explotado Meganman
-La vida actual de Meganman es 0
-Meganman se ha quedado sin vida
-King Dedede le ha metido un martillazo a Meganman
-La vida actual de Meganman es 0
-Meganman se ha quedado sin vida
-Voltorb ha explotado Meganman
-La vida actual de Meganman es 0
-Meganman se ha quedado sin vida
+Arceus ha usado canto mortal Korby
+La vida actual de Korby es 0
+Korby se ha quedado sin vida
+Tu personaje ha muerto
+Tu personaje ha perdido el combate
+Dittu ha ganado el combate
 El combate ha finalizado

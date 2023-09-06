@@ -10,6 +10,7 @@ import Strategy.Korby;
 import Strategy.Meganman;
 import Strategy.Dittu;
 import Strategy.Personaje;
+
 public class Arena implements Subject{
   ArrayList<Observer> usuarios;
   public Arena(){
@@ -42,11 +43,12 @@ public class Arena implements Subject{
   }
 
   /*
-   * Combates disponibles, incluye la lista de metodos que ejecutan los personajes.
+   * CombateDos, incluye la lista de metodos que ejecutan los personajes durante el combate 
+   * El combate es ganado por meganman
    * Al finalizar el combate cierra los archivo txt
    */
 
-  public void combate2(){
+  public void combateDos(){
     Personaje korby = new Korby();
     Personaje meganman = new Meganman();
     Personaje dittu = new Dittu();
@@ -64,7 +66,13 @@ public class Arena implements Subject{
     closeFicheros();
   }
 
-  public void combate3(){
+  /*
+   * CombateTres, incluye la lista de metodos que ejecutan los personajes durante el combate 
+   * El combate es ganado por meganman
+   * Al finalizar el combate cierra los archivo txt
+   */
+
+  public void combateTres(){
     Personaje korby = new Korby();
     Personaje meganman = new Meganman();
     Personaje dittu = new Dittu();
@@ -85,9 +93,18 @@ public class Arena implements Subject{
     notifyUser(dittu.powerUp(0));
     notifyUser(dittu.ataque(meganman));
     notifyUser(dittu.ataque(korby));
+    notifyUser(dittu.ganoCombate());
+    notifyUser(combateFinalizado());
     closeFicheros();
   }
-  public void combate4(){
+
+  /*
+   * Combate, incluye la lista de metodos que ejecutan los personajes durante el combate 
+   * El combate es ganado por dittu
+   * Al finalizar el combate cierra los archivo txt
+   */
+
+  public void combate(){
     Personaje korby = new Korby();
     Personaje meganman = new Meganman();
     Personaje dittu = new Dittu();

@@ -17,10 +17,7 @@ public class User implements Observer{
   Arena arena; 
   String nombre;
   Personaje personaje;
-  BufferedWriter bf;
   PrintWriter pw;
-  FileWriter fw;
-  String mensaje;
 
   /*
    * Constructor que además genera un archivo .txt con el nombre del usuario
@@ -35,10 +32,8 @@ public class User implements Observer{
     this.nombre = nombre; 
     this.personaje = personaje; 
     this.arena = arena; 
-    mensaje ="";
     try{
-      this.fw = new FileWriter(nombre+".txt");
-      this.pw = new PrintWriter(fw);
+      this.pw = new PrintWriter(new FileWriter(nombre+".txt"));
       this.pw.write("Has seleccionado a "+ personaje.getNombre() + '\n');
     }catch(Exception e){
       System.err.println("Error al escribir el fichero");
@@ -57,10 +52,8 @@ public class User implements Observer{
     this.personaje = personaje; 
     Random rnd = new Random();
     this.nombre = String.valueOf(rnd.nextInt(100));
-    mensaje = "";
     try{
-      this.fw = new FileWriter(nombre+".txt");
-      this.pw = new PrintWriter(fw);
+      this.pw = new PrintWriter(new FileWriter(nombre+".txt"));
       this.pw.write("Has seleccionado a "+ personaje.getNombre() + '\n');
     }catch(Exception e){
       System.err.println("Error al escribir el fichero");

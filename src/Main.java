@@ -21,11 +21,11 @@ public class Main {
     arena.addUser(rubiocai);
     switch(x){
       case 0:
-        arena.combate4();
+        arena.combate();
       case 1:
-        arena.combate2();
+        arena.combateDos();
       case 2:
-        arena.combate3();
+        arena.combateTres();
     }
   }
 }
