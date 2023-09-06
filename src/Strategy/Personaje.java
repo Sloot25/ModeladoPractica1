@@ -46,8 +46,8 @@ public abstract class Personaje {
    * 
    * @return leyenda de que el personaje ha ganado
    */
-  public String ganoCombate(Personaje personaje){
-    return personaje.getNombre() + " ha ganado el combate";
+  public String ganoCombate(){
+    return getNombre() + " ha ganado el combate\n";
   }
 
   abstract public String ataqueBase(Personaje personaje); //abstract public void setAtaque(Ataque ataque) throws Exception;

@@ -111,4 +111,9 @@ public class Arena implements Subject{
     closeFicheros();
   }
 
+  private String combateFinalizado(){
+    return "El combate ha finalizado\n";
+  }
+
+
 }
